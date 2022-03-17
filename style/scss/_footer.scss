@@ -13,12 +13,22 @@ footer {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      @include breakPoints(mobile) {
+        flex-direction: column;
+      }
       img {
         width: 15em;
+        @include breakPoints(mobile) {
+          width: 10em;
+          margin-bottom: 1em;
+        }
       }
       a {
         img {
           width: 3.5em;
+          @include breakPoints(mobile) {
+            width: 2em;
+          }
           &:hover {
             transform: translateY(5px);
           }

@@ -21,3 +21,33 @@ cancelBtn.addEventListener('click',()=>{
   cancelBtn.style.display="none"
   nav.style.display="none"
 })
+
+
+
+// scroll to every section -------
+
+let homeBtn=document.querySelector("#homeBtn");
+let aboutUsBtn=document.querySelector("#aboutUsBtn");
+let servicesBtn=document.querySelector("#servicesBtn");
+let iAndEBtn=document.querySelector("#iAndEBtn");
+let contactBtn=document.querySelector("#contactBtn");
+let bigLogo=document.querySelector("#bigLogo")
+
+bigLogo.addEventListener("click",()=>{
+  location.href="#section-1"
+})
+homeBtn.addEventListener("click",()=>{
+  location.href="#section-1"
+})
+aboutUsBtn.addEventListener("click",()=>{
+  location.href="#section-2"
+})
+servicesBtn.addEventListener("click",()=>{
+  location.href="#section-3"
+})
+iAndEBtn.addEventListener("click",()=>{
+  location.href="#section-4"
+})
+contactBtn.addEventListener("click",()=>{
+  location.href="#section-5"
+})
