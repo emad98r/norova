@@ -1,0 +1,88 @@
+.section-1 {
+  width: 100%;
+  background-color: var(--white-color);
+  height: 85vh;
+  padding: 1em 0;
+  margin-top: 7em;
+  @include breakPoints(mobile) {
+    height: 50vh;
+  }
+  @include breakPoints(small) {
+    height: 50vh;
+  }
+  .container {
+    height: 80vh;
+    border-radius: 10px;
+    background-image: url("../../img/1-section-B.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    animation: bgmoving 12s infinite ease-in-out;
+    @keyframes bgmoving {
+      0%,
+      100% {
+        background-image: url("../../img/1-section-B.jpg");
+      }
+      25% {
+        background-image: url("../../img/1-section-A.jpg");
+      }
+      50% {
+        background-image: url("../../img/1-section-C.jpg");
+      }
+      75% {
+        background-image: url("../../img/1-section-D.jpg");
+      }
+    }
+    @include breakPoints(mobile) {
+      padding: 0;
+      height: 100%;
+      width: 95%;
+      margin: 1em auto;
+    }
+    @include breakPoints(small) {
+      padding: 0;
+      height: 100%;
+      width: 95%;
+      margin: 1em auto;
+    }
+    .info {
+      position: absolute;
+      background-image: linear-gradient(to left, #ffffff3d, #000000d1);
+      height: 100%;
+      width: 50%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0 2em;
+      border-radius: 10px;
+      @include breakPoints(mobile) {
+        width: 100%;
+      }
+
+      img {
+        width: 15em;
+        margin-bottom: 2em;
+        @include breakPoints(mobile) {
+          width: 10em;
+        }
+      }
+      p {
+        color: var(--yellow-color);
+        font-weight: 800;
+        font-family: var(--sub-font);
+        line-height: 1.5;
+        text-transform: uppercase;
+        font-size: 2em;
+        text-shadow: 0px 1px 1px black;
+        @include breakPoints(mobile) {
+          font-size: 0.8em;
+        }
+        @include breakPoints(small) {
+          font-size: 1.2em;
+        }
+      }
+    }
+  }
+}

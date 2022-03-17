@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--light-blue-color) var(--white-color);
+}
+body {
+  font-family: var(--main-font);
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+  @include breakPoints(mobile) {
+    max-width: 100%;
+    padding: 0 0.8em;
+  }
+}
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.big-title {
+  font-size: 3em;
+  opacity: 0.4;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: var(--sub-font);
+  margin-bottom: 2em;
+  @include breakPoints(mobile) {
+    font-size: 2.5em;
+  }
+  @include breakPoints(small) {
+    font-size: 3.5em;
+  }
+}
