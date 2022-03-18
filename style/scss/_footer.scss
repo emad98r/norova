@@ -54,6 +54,12 @@ footer {
           width: 1.5em;
           &:hover {
             transform: translateY(5px);
+            @include breakPoints(mobile) {
+              transform: none;
+            }
+            @include breakPoints(small) {
+              transform: none;
+            }
           }
         }
       }
