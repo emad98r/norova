@@ -1,11 +1,14 @@
 :root {
-  // fonts---------
-  --main-font: "Noto Kufi Arabic", sans-serif;
-  --sub-font: "Noto Serif", serif;
-
   // colors------
-  --dark-blue-color: #21325e;
-  --light-blue-color: #3e497a;
-  --yellow-color: #f1d00a;
-  --white-color: #f0f0f0;
+  --dark-color: #080c24;
+  --light-color: #494d62;
+  --blue-color: #008eff;
+  --red-color: #ea1e00;
+  --white-color: #f3f3f3;
+  // fonts---------
+  --main-font: "PT Sans Narrow", sans-serif;
+}
+@font-face {
+  font-family: subFont;
+  src: url("../../fonts/VIP\ Rawy\ Regular\ Regular.ttf");
 }

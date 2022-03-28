@@ -1,70 +1,131 @@
 .section-4 {
   width: 100%;
-  background-color: var(--white-color);
-  padding: 4em 0;
+  overflow: hidden;
+  user-select: none;
   .container {
-    .big-title {
-      color: var(--light-blue-color);
-      line-height: 1.1;
-      margin-bottom: 2em;
+    display: flex;
+    height: 20em;
+    animation: slider 15s infinite linear alternate;
+    @keyframes slider {
+      0% {
+        transform: translateX(0);
+      }
+      16% {
+        transform: translateX(0);
+      }
+      32% {
+        transform: translateX(-50vw);
+      }
+      48% {
+        transform: translateX(-50vw);
+      }
+      64% {
+        transform: translateX(-100vw);
+      }
+      80% {
+        transform: translateX(-100vw);
+      }
+      96% {
+        transform: translateX(-150vw);
+      }
+      100% {
+        transform: translateX(-150vw);
+      }
     }
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
-      gap: 3em 2em;
-      .product {
-        position: relative;
-        max-height: 300px;
-        overflow: hidden;
-        @keyframes movingB {
-          0% {
-            transform: rotate(0);
-          }
-          100% {
-            transform: rotate(360deg);
-          }
+    @include breakPoints(mobile) {
+      animation: slider 17s infinite linear alternate;
+      @keyframes slider {
+        0% {
+          transform: translateX(0);
         }
-        &:hover {
-          i {
-            display: flex;
-          }
+        16% {
+          transform: translateX(0);
         }
-        img {
-          height: 100%;
-          width: 100%;
-          object-fit: cover;
-          cursor: pointer;
-          border-radius: 10px;
-          box-shadow: 1px 1px 1px gray;
+        32% {
+          transform: translateX(-100vw);
         }
-        i {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          padding: 0 1em;
-          background-color: #000000ad;
-          z-index: 3;
-          min-height: 100%;
-          color: var(--white-color);
-          text-transform: uppercase;
-          text-align: center;
-          display: none;
-          align-items: center;
-          justify-content: center;
-          font-family: var(--sub-font);
-          border-radius: 10px;
-          @include breakPoints(mobile) {
-            height: max-content;
-            display: flex;
-            min-height: 50%;
-          }
-          @include breakPoints(small) {
-            height: max-content;
-            display: flex;
-            min-height: 30%;
-          }
+        48% {
+          transform: translateX(-200vw);
         }
+        64% {
+          transform: translateX(-300vw);
+        }
+        80% {
+          transform: translateX(-400vw);
+        }
+        100% {
+          transform: translateX(-500vw);
+        }
+      }
+    }
+    @include breakPoints(small) {
+      animation: slider 10s infinite linear alternate;
+      @keyframes slider {
+        0% {
+          transform: translateX(0);
+        }
+        16% {
+          transform: translateX(0);
+        }
+        32% {
+          transform: translateX(-50vw);
+        }
+        48% {
+          transform: translateX(-100vw);
+        }
+        64% {
+          transform: translateX(-150vw);
+        }
+        80% {
+          transform: translateX(-200vw);
+        }
+        100% {
+          transform: translateX(-200vw);
+        }
+      }
+    }
+    @include breakPoints(medium) {
+      animation: slider 10s infinite linear alternate;
+      @keyframes slider {
+        0% {
+          transform: translateX(0);
+        }
+        16% {
+          transform: translateX(0);
+        }
+        32% {
+          transform: translateX(-50vw);
+        }
+        48% {
+          transform: translateX(-100vw);
+        }
+        64% {
+          transform: translateX(-150vw);
+        }
+        80% {
+          transform: translateX(-200vw);
+        }
+        96% {
+          transform: translateX(-200vw);
+        }
+        100% {
+          transform: translateX(-200vw);
+        }
+      }
+    }
+    img {
+      border-top: 5px solid var(--blue-color);
+      border-bottom: 5px solid var(--blue-color);
+      width: 50vw;
+      object-fit: cover;
+      @include breakPoints(mobile) {
+        width: 100vw;
+      }
+      @include breakPoints(small) {
+        width: 50vw;
+      }
+      @include breakPoints(medium) {
+        width: 50vw;
       }
     }
   }

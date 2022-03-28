@@ -1,0 +1,189 @@
+.section-6 {
+  width: 90%;
+  margin: 2em auto;
+  display: flex;
+  padding: 3em 1em;
+  @include breakPoints(mobile) {
+    width: 100%;
+    flex-direction: column;
+  }
+  @include breakPoints(small) {
+    width: 100%;
+    flex-direction: column;
+  }
+  section {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    @include breakPoints(mobile) {
+      width: 100%;
+      padding: 0 1em;
+    }
+    @include breakPoints(small) {
+      width: 80%;
+      margin: 0 auto;
+    }
+    @include breakPoints(medium) {
+      width: 50%;
+    }
+    img {
+      width: 35em;
+      transition: 1.5s;
+      &:first-of-type {
+        margin-bottom: 2em;
+      }
+      &:last-of-type {
+        margin-top: 2em;
+      }
+      @include breakPoints(mobile) {
+        width: 100%;
+      }
+      @include breakPoints(medium) {
+        width: 100%;
+      }
+    }
+    .info {
+      h1 {
+        font-family: var(--main-font);
+        color: var(--blue-color);
+        font-size: 3.5em;
+        @include breakPoints(mobile) {
+          font-size: 2.5em;
+        }
+      }
+      ul {
+        font-family: var(--main-font);
+        width: 90%;
+        @include breakPoints(mobile) {
+          width: 100%;
+        }
+        @include breakPoints(small) {
+          width: 100%;
+        }
+        li {
+          padding: 0.5em 0.5em 0.5em 1em;
+          font-size: 1.5em;
+          position: relative;
+          color: var(--dark-color);
+          @include breakPoints(mobile) {
+            font-size: 1.1em;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            width: 0.5em;
+            height: 0.5em;
+            background-color: var(--light-color);
+            top: 50%;
+            left: 0;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+  }
+  form {
+    width: 40%;
+    background-color: var(--dark-color);
+    border-radius: 10px;
+    color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    padding: 4em 2em;
+    @include breakPoints(mobile) {
+      width: 100%;
+    }
+    @include breakPoints(small) {
+      width: 80%;
+      margin: 0 auto;
+    }
+    @include breakPoints(medium) {
+      width: 50%;
+    }
+    h1 {
+      text-align: center;
+      font-family: var(--main-font);
+      color: var(--blue-color);
+      text-transform: uppercase;
+      margin-bottom: 1em;
+    }
+    label {
+      font-family: subFont;
+      margin: 1em 0 0;
+      text-transform: capitalize;
+    }
+    input,
+    textarea {
+      padding: 1em;
+      background-color: var(--light-color);
+      border: none;
+      color: var(--white-color);
+      border-radius: 10px;
+      margin-bottom: 1em;
+      font-family: var(--main-font);
+      font-size: 1em;
+      border: none;
+      outline: none;
+      &:focus {
+        border-bottom: 1px solid var(--white-color);
+      }
+    }
+    textarea {
+      resize: none;
+    }
+    select {
+      padding: 1em;
+      background-color: var(--light-color);
+      border: none;
+      color: var(--white-color);
+      border-radius: 10px;
+      text-transform: uppercase;
+      font-family: var(--main-font);
+      font-size: 1em;
+      option {
+        font-size: 1em;
+        font-family: var(--main-font);
+        background-color: var(--white-color);
+        color: var(--blue-color);
+      }
+    }
+    .short-input,
+    .product-amount-div {
+      input {
+        @include breakPoints(mobile) {
+          width: 50%;
+        }
+        select {
+          @include breakPoints(mobile) {
+            width: 50%;
+          }
+        }
+      }
+    }
+    div {
+      input {
+        @include breakPoints(mobile) {
+          width: 100%;
+        }
+      }
+      &:last-of-type {
+        margin-bottom: 1em;
+      }
+    }
+    button {
+      width: 100%;
+      font-family: var(--main-font);
+      background-color: var(--red-color);
+      color: var(--white-color);
+      padding: 1em;
+      font-size: 1.2em;
+      text-transform: uppercase;
+      font-weight: 600;
+      border-radius: 10px;
+      &:hover {
+        background-color: var(--white-color);
+        color: var(--blue-color);
+      }
+    }
+  }
+}
