@@ -26,6 +26,9 @@ html {
 body {
   background-color: var(--white-color);
   overflow-x: hidden;
+  @include breakPoints(mobile) {
+    margin-bottom: 2.5em;
+  }
 }
 
 li {
@@ -58,6 +61,7 @@ a {
     @include breakPoints(mobile) {
       width: 100%;
       padding: 0.3em;
+      text-align: center;
     }
     option {
       background-color: var(--white-color);
