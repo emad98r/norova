@@ -79,6 +79,9 @@ orderNowBtn.addEventListener("click",()=>{
 
 
 // Animation---------
+let smallS = window.matchMedia('(max-width: 767px)');
+
+
 // section -2 
 let shipImg=document.querySelector('.section-2 img'),
 section_2=document.querySelector('.section-2');
@@ -129,6 +132,9 @@ window.addEventListener("scroll",()=>{
   if(window.scrollY>=section_6.offsetTop-300){
     flight_track.forEach((e)=>{
       e.style.cssText=`width:35em;`
+      if(smallS.matches){
+      e.style.cssText=`width:100%`
+      }
     })
   }else{
     flight_track.forEach((e)=>{
@@ -138,14 +144,3 @@ window.addEventListener("scroll",()=>{
 })
 
 
-// footer -----
-let copy_rights=document.querySelector('.copy-rights')
-let footer=document.querySelector('footer')
-
-window.addEventListener("scroll",()=>{
-  if(window.scrollY >= footer.offsetTop-500){
-    copy_rights.style.cssText=`width:100%;opacity:1;`
-  }else{
-    copy_rights.style.cssText=`width:0;opacity:0;`
-  }
-})

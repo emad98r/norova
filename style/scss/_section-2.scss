@@ -19,6 +19,7 @@
   img {
     width: 50em;
     transition: 1s;
+    opacity: 0;
     @include breakPoints(mobile) {
       width: 100%;
     }
