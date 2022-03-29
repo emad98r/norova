@@ -222,6 +222,8 @@
   </section>
 
   <form action="https://formsubmit.co/global.onorva@gmail.com" method="POST">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_autoresponse" value="Thank you for trusting us and we will reply to you as soon as possible">
     <h1>you can order now</h1>
     <label for="FreightT">Freight type:</label>
     <select name="freight type" id="">
@@ -247,7 +249,7 @@
       <input type="text" placeholder="to" name="to-distance" id="">
     </div>
     <label for="products category">products category:</label>
-    <select name="products category:" id="">
+    <select name="products category" id="">
       <option value="Food & Spices">Food & Spices</option>
       <option value="Factory Equipment">Factory Equipment</option>
       <option value="Accessories">Accessories</option>
@@ -255,19 +257,19 @@
       <option value="Clothes and Fabrics">Clothes and Fabrics</option>
     </select>
     <label for="product description">product description:</label>
-    <textarea name="product description:" placeholder="describe the product you want to order"></textarea>
+    <textarea name="product description" placeholder="describe the product you want to order"></textarea>
     <label for="product amount">product amount:</label>
     <div class="product-amount-div">
-      <input type="text" name="product amount:" placeholder="for example 100 box">
+      <input type="text" name="product amount" placeholder="for example 100 box">
       <select name="product amount ber">
         <option value="box">box</option>
         <option value="bottle">bottle</option>
         <option value="bag">bag</option>
       </select>
     </div>
-    <input type="text" name="name:" placeholder="Your Name">
-    <input type="email" name="email:" placeholder="Your Email">
-    <input type="text" name="phone no:" placeholder="Your Phone">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="text" name="phone no" placeholder="Your Phone" required>
     <button type="submit">submit now</button>
   </form>
 </div>
