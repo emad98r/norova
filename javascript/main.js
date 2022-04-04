@@ -88,8 +88,6 @@ section_2=document.querySelector('.section-2');
 window.addEventListener("scroll",()=>{
   if(window.scrollY>=section_2.offsetTop-300){
     shipImg.style.cssText=`opacity:1`
-  }else{
-    shipImg.style.cssText=`opacity:0`
   }
 })
 
@@ -104,11 +102,7 @@ window.addEventListener("scroll",()=>{
   services.forEach((e)=>{
     e.style.cssText=`transform: translateX(0);`
   })
-}else{
-    services.forEach((e)=>{
-      e.style.cssText=`transform: translateX(-80em);`
-    })
-  }
+}
 })
 
 // section - 4 
@@ -118,10 +112,6 @@ window.addEventListener("scroll",()=>{
   if(window.scrollY>=section_5.offsetTop-300){
     products.forEach((e)=>{
       e.style.cssText=`animation: flipInX 1s both;`
-    })
-  }else{
-    products.forEach((e)=>{
-      e.style.cssText=`animation: none;`
     })
   }
 })
@@ -135,10 +125,6 @@ window.addEventListener("scroll",()=>{
       if(smallS.matches){
       e.style.cssText=`width:100%`
       }
-    })
-  }else{
-    flight_track.forEach((e)=>{
-      e.style.cssText=`width:0;`
     })
   }
 })
