@@ -42,10 +42,10 @@ logo.style.opacity=1
 
 // loading page 
 
-let loading_page=document.querySelector(".loading-page")
-window.addEventListener("load",()=>{
-  loading_page.style.display='none'
-})
+// let loading_page=document.querySelector(".loading-page")
+// window.addEventListener("load",()=>{
+//   loading_page.style.display='none'
+// })
 
 
   // nav and sections --------------
